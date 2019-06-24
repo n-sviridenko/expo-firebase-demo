@@ -51,6 +51,10 @@ target 'firebase-demo' do
     :podspec => "../node_modules/react-native/third-party-podspecs/glog.podspec",
     :inhibit_warnings => true
 
+  pod 'RNFirebase',
+    :path => '../node_modules/react-native-firebase/ios'
+  pod 'Firebase/Messaging'
+  pod 'GoogleIDFASupport', '~> 3.14.0'
 
   post_install do |installer|
     installer.pods_project.main_group.tab_width = '2';

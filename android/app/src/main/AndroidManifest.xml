@@ -322,6 +322,16 @@
       android:exported="false">
     </service>
 
+    <!-- Firebase Messaging -->
+    <!-- Expo FCM/GCM are kept below just in case, for the default expo push notification service -->
+    <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
+    <!-- Inlcude this for Background Messages -->
+    <service android:name="io.invertase.firebase.messaging.RNFirebaseBackgroundMessagingService" />
+
     <!-- ImagePicker native module -->
     <activity
       android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

@@ -17,8 +17,12 @@ buildscript {
     maven { url 'https://dl.bintray.com/android/android-tools/' }
   }
   dependencies {
+    // should we keep `3.3.2` or replace w/ `3.4.1` (as per docs)
+    // https://github.com/invertase/react-native-firebase/issues/2226#issuecomment-504962816
     classpath 'com.android.tools.build:gradle:3.3.2'
-    classpath 'com.google.gms:google-services:3.2.1'
+    // changed for `react-native-firebase`
+    // classpath 'com.google.gms:google-services:3.2.1'
+    classpath 'com.google.gms:google-services:4.2.0'
     classpath 'de.undercouch:gradle-download-task:2.0.0'
 
     // https://github.com/awslabs/aws-device-farm-gradle-plugin/releases

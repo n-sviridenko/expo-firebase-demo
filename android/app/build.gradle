@@ -180,6 +180,14 @@ dependencies {
   }
   
 
+  implementation project(':react-native-firebase')
+
+  // Firebase dependencies
+  implementation "com.google.android.gms:play-services-base:16.1.0"
+  implementation "com.google.firebase:firebase-core:16.0.9"
+  implementation "com.google.firebase:firebase-messaging:18.0.0"
+  // For badges on Android
+  implementation 'me.leolin:ShortcutBadger:1.1.21@aar'
 
   
   api 'org.webkit:android-jsc:r241213' // needs to be before react-native
@@ -211,3 +219,5 @@ dependencies {
 
 // This has to be down here for some reason
 apply plugin: 'com.google.gms.google-services'
+// Dependency failing: com.google.android.gms:play-services-analytics:16.0.7 -> com.google.android.gms:play-services-measurement-base@[16.3.0], but play-services-measurement-base version was 16.5.0.
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
